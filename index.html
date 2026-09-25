@@ -44,12 +44,15 @@
 
     /* Change logo.png whenever you want a different client image/logo */
     .hero-logo {
-      width: min(82vw, 410px);
-      max-height: 46vh;
-      object-fit: contain;
+      width: clamp(110px, 31vw, 165px);
+      height: clamp(110px, 31vw, 165px);
+      object-fit: cover;
       display: block;
-      margin: 0 auto 14px;
-      border-radius: 14px;
+      margin: 8px auto 14px;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,.75);
+      box-shadow: 0 5px 18px rgba(0,0,0,.28);
+      background: #fff;
     }
 
     .verified {
@@ -254,7 +257,10 @@
 
     @media (max-width: 380px) {
       .page { padding: 12px 10px 18px; }
-      .hero-logo { max-height: 34vh; }
+      .hero-logo {
+        width: 112px;
+        height: 112px;
+      }
       .stats { gap: 5px; }
       .stat { min-height: 70px; }
       .notice { padding: 11px 5px; }
